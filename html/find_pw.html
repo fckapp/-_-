@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>비블리엇 아이디/비밀번호 찾기</title>
+    <title>비밀번호 찾기 : 비블리엇</title>
     <link rel="stylesheet" href="./css/find_id_or_pw.css">
     <script src="https://kit.fontawesome.com/d5abf4d39e.js" crossorigin="anonymous"></script>
     <script src="./js/toggle.js" defer></script>
@@ -51,20 +51,37 @@
             </div>
         </div>
     </div>
-    <section class="find_id_or_pw-container">
-        <div class="find_id_or_pw-maintext">계정 찾기</div>
-        <div class="find_id_or_pw-iconboxes">
-            <div class="find_id_or_pw-iconbox">
-                <a href=""><img src="./images/icon_id.svg" alt="id"></a>
-            </div>
-            <div class="find_id_or_pw-iconbox">
-                <a href=""><img src="./images/icon_vertical_bar.svg" alt="vertical"></a>
-            </div>
-            <div class="find_id_or_pw-iconbox">
-                <a href=""><img src="./images/icon_password.svg" alt="password"></a>
-            </div>
+    <div class="find_pw-container">
+        <div class="find_pw-maintext">비밀번호 찾기</div>
+        <div class="find_pw-form">
+            <form action="find_pw" method="post">
+                <table class="find_pw-table">
+                    <tr>
+                        <td>
+                            <label for="id">아이디</label><br>
+                            <input type="text" id="id" name="id" class="find_pw-information-text" required >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="find_pw-table-td-email">
+                            <label for="email">이메일</label><br>
+                            <input type="text" id="email" name="email" class="find_pw-information-text" required />
+                            <button type="button" class="find_pw-request-authentication-number"><span>인증번호전송</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="certNum">인증번호</label><br>
+                            <input type="text" id="certNum" name="certNum" class="find_pw-information-text" required />
+                            <button type="button" class="find_pw-request-authentication-number"><span>인증</span></button>
+                        </td>
+                    </tr>
+                </table>
+                
+            </form>
+            <button type="submit" class="find_pw-commit-btn">완료</button><br>
         </div>
-    </section>
+    </div>
     <footer class="sec-footer">
         <div class="footer-primary">
             <div class="row">

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비블리엇</title>
+    <!-- =====================================================================================CSS 부분================================================================================================ -->
+    <!-- ==========================================================================================JSP 부분========================================================================================= -->
+    <link rel="stylesheet" href="main_common.css">
+    <script src="https://kit.fontawesome.com/d5abf4d39e.js" crossorigin="anonymous"></script>
+    <script src="/js/toggle.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="/js/menu.js" defer></script>
+</head>
+<!-- ==============================================================================================HTML부분========================================================================================== -->
+<body class="home-page"; id="home-page">
+    <!-- header 시작 -->
+    <div class="header-navbar">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="http://127.0.0.1:5500/mainPage.html#"><img class="logo" src="./images/logo.svg" height="70px"></a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#"><span class="navbar-menu-text">제품</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">회사</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">채용</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">문의</span></a></li>
+            </ul>
+            <ul class="navbar-aut">
+                <li><a href="#"><span class="navbar-menu-text">로그인</span></a></li>
+                <li><a href="#"><span class="navbar-menu-text">회원가입</span></a></li>
+                <li class="navbar-find-icon">
+                    <input type="text" class="search-input" placeholder="Search..." />
+                    <a href="#" class="fa-solid fa-magnifying-glass"></a>
+                </li>
+            </ul>
+            <a href="#" class="navbar-togglebtn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+        <!-- 서브 메뉴판 -->
+    </div>
+    <div class="menu-pan">
+        <div class="menu-pan-box">
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델1"></div>
+            </div>
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델2"></div>
+            </div>
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델3"></div>
+            </div>
+            <div class="menu-category">
+                <div class="category"><img class="main-product" alt="모델4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- tbody 시작 -->
+    <tbody class="main-tbody">
+        <div class="wrapper">
+            <div class="outter-box img">
+                <img class="main-img" src="/images/전기차1.jpg" alt="전기차 사진">
+                <div class="inner-box">
+                    <button class="btn1 main-1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text">EV 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">지금 바로 문의하세요.</p>
+            </div>
+            <div class="outter-box img">
+                <img class="main-img" src="/images/전기차2.png" alt="전기차 사진">
+                <div class="inner-box">
+                    <button class="btn1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text" style="font-size: 40px;">EV2 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">지금 바로 문의하세요.</p>
+            </div>
+            <div class="outter-box img">
+                <img class="main-img" src="/images/태양광.jpg" alt="태양광 사진">
+                <div class="inner-box">
+                    <button class="btn1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text" style="font-size: 40px;">태양광 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">재생에너지 배터리 지금 바로 문의하세요.</p>
+            </div>
+            <div class="outter-box img">
+                <img class="main-img" src="/images/풍력발전기.jpg" alt="풍력발전기 사진">
+                <div class="inner-box">
+                    <button class="btn1" type="button" onclick="location.href=''">상세보기</button>
+                    <button class="btn2" type="button" onclick="location.href=''">문의하기</button>
+                </div>
+                <h2 class="img-text" style="font-size: 40px;">풍력 배터리</h2>
+                <p class="img-text-sub" style="font-size: 15px;">재생에너지 배터리 지금 바로 문의하세요.</p>
+            </div>
+        </div>
+    </tbody>
+</body>
+</html>

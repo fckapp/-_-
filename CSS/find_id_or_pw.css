@@ -385,7 +385,7 @@ footer .col:last-child{
 /*---------------------------------------------------------id찾기 페이지-------------------------------------------------*/
 .find_id-container{
     margin-bottom: 10%;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -427,7 +427,7 @@ footer .col:last-child{
 }
 .find_id-table{
     border-spacing: 50px;
-    align-content: center;
+    
 }
 .find_id-commit-btn{
     width: 300px;
@@ -448,6 +448,12 @@ footer .col:last-child{
 .find_id-table-td-email input,
 .find_id-table-td-email button{
     vertical-align: middle;
+}
+.find_id-container form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
 }
 /*---------------------------------------------------------pw찾기 페이지-------------------------------------------------*/
 .find_pw-container{
@@ -517,3 +523,48 @@ footer .col:last-child{
     vertical-align: middle;
 }
 /*----------------------------------------------------------------------------아이디 목록 페이지----------------------------------------------*/
+.find_id_success-btnLogin{
+	width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #A9D0F5;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+.find_id_success-btnFindPw{
+	width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #A9D0F5;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+.find_id_success-btnLogin:hover, .find_id_success-btnFindPw:hover {
+    background-color: #58ACFA;
+}
+.box_ids form{
+	
+}
+.find_id_success-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+.find_id_success-maintext{
+	text-align: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    margin: 5%;
+}

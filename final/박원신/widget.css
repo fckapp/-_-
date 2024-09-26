@@ -91,9 +91,6 @@ Each at-rule has its own syntax and usage, but they all start with the @ charact
     }
 }
 
-html {
-    font-size: 10px;
-}
 
 ul,
 li {
@@ -112,14 +109,18 @@ a {
     margin: 100px auto;
 }
 
+.board_list_wrap {
+	font-size: 10px;
+}
 .board_list {
     width: 100%;
     border-top: 2px solid #000;
+    font-size: 10px;
 }
 
 .board_list>div {
     border-bottom: 1px solid #ddd;
-    font-size: 0;
+    font-size: 0px;
 }
 
 .board_list>div.top {
@@ -134,7 +135,7 @@ a {
     display: inline-block;
     padding: 15px 0;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 .board_list>div.top>div {
@@ -178,7 +179,7 @@ a {
 .bt_wrap {
     margin-top: 30px;
     text-align: center;
-    font-size: 0;
+    font-size: 14px;
     /*박스 사이 여백 사라짐*/
 }
 
@@ -189,7 +190,7 @@ a {
     margin-left: 10px;
     border: 1px solid #000;
     border-radius: 2px;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 .bt_wrap a:first-child {
@@ -225,13 +226,13 @@ a {
 
 .board_page .bt {
     padding-top: 10px;
-    font-size: 1.2rem;
+    font-size: 14px;
     letter-spacing: -1px;
 }
 
 .board_page .num {
     padding-top: 9px;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 .board_page .num.on {

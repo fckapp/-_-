@@ -1,0 +1,594 @@
+/* 폰트 임포트 부분 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body {
+    margin: 0 auto;
+    padding: 0; 
+    display: block;
+    height: fit-content;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Pretendard;
+}
+* {
+    outline-offset: 2px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+input:focus{
+	outline: none;
+}
+label {
+    font-size: 14px;
+    font-family: Pretendard;
+}
+/* ================================================================================= 메인 페이지 css 시작 =========================================================================================== */
+.header-navbar {
+    position: static;
+}
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0px 3.75%; /*수정*/
+}
+/* 로고 */
+.navbar-logo{ 
+    display: flex;
+    flex: 1;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+/* 제품 / 회사정보 / 채용정보 / 문의 게시판  */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    /* margin-left: 40px; */
+    padding: 0;
+    align-items: center;
+    flex: 1;/*수정*/
+    justify-content: center;/*수정*/
+}
+.navbar-menu-text{
+    font-family: Pretendard;
+    font-weight: 500;
+}
+.navbar-menu li{
+    padding: 15px;
+} 
+.navbar-menu li:hover {
+    background-color: #D8D8D8;
+    border-radius: 3px;
+}
+/* 로그인 / 회원가입 / 검색  */
+.navbar-aut{
+    flex: 1;/*수정*/
+    justify-content: flex-end;/*수정*/
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    position: relative;
+}
+.search-input{
+    display: none;
+    transition: width 1s ease-in-out;
+    transform-origin: right;
+    border: 0;
+}
+.navbar-find-icon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* height: 20px; */
+}
+.navbar-find-icon:hover .search-input{
+    display: flex;
+    width:180px;
+    /* height: 20px; */
+}
+.navbar-aut li {
+    padding: 15px;
+}
+.navbar-aut li:hover {
+    background-color: #D8D8D8;
+    border-radius: 3px;
+}
+.navbar-aut div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 메뉴 모달창 */
+.menu-pan {
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 999;
+    padding-left: 180px;
+    padding-right: 180px;
+    font-size: 15px;
+    display: none;
+    align-items: center;
+    box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.2);
+}
+.menu-pan-box {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+}
+.menu-category{
+    float: left;
+    margin: 0px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.category {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: auto;
+}
+.main-product {
+    width: 100%;
+    height: 150px;
+}
+.main-product-text-box {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.main-product-text {
+    text-align: center;
+    align-items: center;
+}
+.main-product-text-1 {
+    text-decoration: underline;
+    margin-right: 10px;
+}
+.main-product-text-2 {
+    text-decoration: underline;
+    margin-left: 10px;
+}
+/* 1000px 이하일 경우 토글버튼 css */
+.navbar-togglebtn {
+    position:absolute;
+    right: 15px;
+    font-size: 30px;
+    margin-top: 15px;
+    display: none;
+}
+/* 1000px 이하일 경우 반응형으로 변경 */
+@media screen and (max-width: 1000px) {
+    /**{ 디버깅용
+        /* font-size: small;
+        font-style: italic;
+    }*/
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar-menu li {
+        width: 100%;
+        text-align: start;
+    }
+    .navbar-aut {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar-aut li {
+        width: 100%;
+        text-align: start;
+    }
+    .navbar-togglebtn {
+        display: block;
+    }
+    .navbar-menu.active,
+    .navbar-aut.active {
+        display: flex;
+    }
+    /*채용정보 반응형*/
+    .recruitmentPage-sec-careers img{
+        width: 100%;
+        object-fit: cover;
+        max-width: 100%;
+    }
+    .recruitmentPage-sec-careers .career-div-p{
+        max-width: 100%;
+    }
+    .sec-careers-one, .sec-careers-three{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .sec-careers-two{
+        flex-direction: column !important;
+    }
+    .sec-careers-two div{
+        text-align: center !important;
+    }
+}
+/* 메인 페이지 사진들 CSS */
+.wrapper {
+    width: 100%;
+    position: absolute;
+    font-family: Pretendard;
+    flex-flow: column;
+}
+.outter-box {
+    height: 100ch;
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    grid-row-start: 1;
+    grid-column-start: -1;
+    grid-row-end: auto;
+    grid-column-end: auto;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+}
+.inner-box {
+    margin-top: 800px;
+}
+.wrapper > div:last-child{border-bottom: 0;}
+.main-img {
+    position: absolute;
+    width: 100%;
+    height: 100ch;
+}
+.navbar-menu-text{
+    font-family: Pretendard;
+    font-weight: 500;
+}
+.details-btn {
+    margin-right: 10px;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: black;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    cursor: pointer;
+}
+.details-btn:hover {
+    background-color: #424242;
+}
+.inquiry-btn {
+    margin-left: 10px;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: white;
+    color: black;
+    font-family: Pretendard;
+    font-weight: 600;
+    cursor: pointer;
+}
+.img-text {
+    position: absolute;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.img-text-sub {
+    position: absolute;
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+.mainpage-main-content-video {
+    height: 120ch;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+/*-----------------------------------------------------------------------푸터-------------------------*/
+footer{
+    margin-top: 30px;
+}
+.footer-primary{
+    color: #fff;
+    letter-spacing: -0.05em;
+}
+footer .row:first-child{
+    background-color: black;
+    height: 63px;
+    width: 100%;
+    border-bottom: 1px solid #222;
+}
+footer .row:last-child{
+    background-color: black;
+    height: 85px;
+}
+.footer-links{
+    width: 100%;
+}
+footer ul{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 0 0 3.75%;
+    list-style-type: none;
+}
+footer li::after{
+    content: "/";
+    margin: 0 10px;
+}
+footer li:last-child::after{
+    content: "";
+}
+footer li a:hover{
+    color: #fff;
+}
+footer .inner{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+footer li a{
+    color: #b4b4b4;
+}
+footer .col:last-child{
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    align-items: center;
+    padding-inline-start: 3.75%;
+}
+.footer-logo{
+    width: 115px;
+    height: auto;
+    margin-right: 20px;
+}
+.footer-logo img{
+    width: 100%;
+}
+/*-----------------------------------------------아이디/비번 찾기 페이지-------------------------------*/
+:root{
+    /* clamp(최소값, 화면 크기에 따라서 늘어나고 줄어들지, 최대값)*/
+    --font-size-lg: clamp(1.5rem, 3vw, 3.5rem);
+    --font-size-md: clamp(1rem, 1vw, 2rem);
+    --font-size-sm: clamp(0.5rem, 0.5vw, 1rem);
+}
+.find_id_or_pw-container{
+    margin-bottom: 10%;
+}
+.find_id_or_pw-container .find_id_or_pw-maintext{
+    text-align: center;
+    justify-items: center;
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    margin: 5%;
+}
+.find_id_or_pw-container .find_id_or_pw-iconboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.find_id_or_pw-container .find_id_or_pw-iconbox{
+    width: 300px;
+    height: auto;
+}
+.find_id_or_pw-container img{
+    width: 100%;
+}
+/*---------------------------------------------------------id찾기 페이지-------------------------------------------------*/
+.find_id-container{
+    margin-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.find_id-information-text {
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+    border-color: #fff;
+    background-color: #E6E6E6;
+    border: 0; /*input[type=text] border line 제거*/
+}
+.find_id-request-authentication-number {
+    width: 60px; /* 50px 에서 60px로 바꿈*/
+    height: 40px;
+    background-color: #585858;
+    border-radius: 4px;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 12px;
+}
+.find_id-request-authentication-number:hover {
+    background-color: #2E2E2E;
+}
+.find_id-container .find_id-maintext{
+    text-align: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    margin: 5%;
+}
+.find_id-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.find_id-table{
+    border-spacing: 50px;
+    
+}
+.find_id-commit-btn{
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #A9D0F5;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+.find_id-commit-btn:hover {
+    background-color: #58ACFA;
+}
+.find_id-table-td-email input,
+.find_id-table-td-email button{
+    vertical-align: middle;
+}
+.find_id-container form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+}
+/*---------------------------------------------------------pw찾기 페이지-------------------------------------------------*/
+.find_pw-container{
+    margin-bottom: 10%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.find_pw-information-text {
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+    border-color: #fff;
+    background-color: #E6E6E6;
+    border: 0; /*input[type=text] border line 제거*/
+}
+.find_pw-request-authentication-number {
+    width: 60px; /* 50px 에서 60px로 바꿈*/
+    height: 40px;
+    background-color: #585858;
+    border-radius: 4px;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 12px;
+}
+.find_pw-request-authentication-number:hover {
+    background-color: #2E2E2E;
+}
+.find_pw-container .find_pw-maintext{
+    text-align: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    margin: 5%;
+}
+.find_pw-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.find_pw-table{
+    border-spacing: 50px;
+    align-content: center;
+}
+.find_pw-commit-btn{
+    width: 366px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #A9D0F5;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+.find_pw-commit-btn:hover {
+    background-color: #58ACFA;
+}
+.find_pw-table-td-email input,
+.find_pw-table-td-email button{
+    vertical-align: middle;
+}
+/*----------------------------------------------------------------------------아이디 목록 페이지----------------------------------------------*/
+.find_id_success-btnLogin{
+	width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #A9D0F5;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+.find_id_success-btnFindPw{
+	width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #A9D0F5;
+    color:white;
+    font-family: Pretendard;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+.find_id_success-btnLogin:hover, .find_id_success-btnFindPw:hover {
+    background-color: #58ACFA;
+}
+.box_ids form{
+	
+}
+.find_id_success-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+.find_id_success-maintext{
+	text-align: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    margin: 5%;
+}

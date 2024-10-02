@@ -267,7 +267,7 @@
                                    	<span>새 이름</span>
                                	</label>
                                	<div class="mypage-text-box name-text-box-2">
-                                   	<input type="text" class="mypage-text-input name-text" id="newName" name="newName" required="이름을 입력하세요." placeholder="이름을 입력하세요.">
+                                   	<input type="text" class="mypage-text-input name-text" id="newName" name="newName" maxlength="100" required placeholder="이름을 입력하세요.">
                                	</div>
                            	</div>
                        	</div>
@@ -300,7 +300,7 @@
                                    	<span>새 전화번호</span>
                                	</label>
                                	<div class="mypage-text-box tell-text-box-2">
-                                   	<input type="text" class="mypage-text-input tell-text" id="newTell" name="newTell" required="전화번호를 입력하세요." placeholder="전화번호를 입력하세요.">
+                                   	<input type="text" class="mypage-text-input tell-text" id="newTell" name="newTell" maxlength="11" pattern="010\d{7,8}" required placeholder="010부터 입력하세요.">
                                	</div>
                            	</div>
                        	</div>
@@ -324,7 +324,7 @@
 	                                   <span>새 이메일</span>
 	                               </label>
 	                               <div class="mypage-text-box email-text-box-1">
-	                                   <input type="email" class="mypage-text-input email-text" id="newEmail" name="newEmail" required="이메일을 입력하세요." placeholder="이메일을 입력하세요.">
+	                                   <input type="email" class="mypage-text-input email-text" id="newEmail" name="newEmail" maxlength="100" required placeholder="이메일을 입력하세요.">
 	                               </div>
 	                               
 	                           </div>
@@ -365,7 +365,7 @@
                                     <span>기존 비밀번호</span>
                                 </label>
                                 <div class="mypage-text-box pw-text-box-1">
-                                    <input type="password" class="mypage-text-input pw-text" id="ex-password">
+                                    <input type="password" class="mypage-text-input pw-text" id="ex-password" maxlength="20" pattern=".{1,20}" required>
                                 </div>
                             </div>
                         </div>
@@ -378,7 +378,7 @@
                                     <span>새 비밀번호</span>
                                 </label>
                                 <div class="mypage-text-box pw-text-box-2" style="margin-bottom: 15px;">
-                                    <input type="password" class="mypage-text-input pw-text" id="new-pw" name="new-pw"required="비밀번호를 입력하세요." placeholder="비밀번호를 입력하세요.">
+                                    <input type="password" class="mypage-text-input pw-text" id="new-pw" name="new-pw" maxlength="20" pattern=".{1,20}" required placeholder="비밀번호를 입력하세요.">
                                 </div>
                             </div>
                         </div>

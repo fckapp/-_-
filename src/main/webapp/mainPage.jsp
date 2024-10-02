@@ -55,6 +55,7 @@
 	                    </c:when>
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
+	                        
 	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>

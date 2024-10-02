@@ -118,9 +118,14 @@
 	        <div class="back-button">
 	            <a href="<%= request.getContextPath() %>/inquery">목록</a> <!-- 목록으로 돌아가는 버튼 -->
 	        </div>
-	        <div class="delete-button">
-	            <a href="<%= request.getContextPath() %>/reply?inquireId=<%= inquery.getInqueryId() %>">삭제</a> <!-- 게시판 글 삭제 버튼 -->
-	        </div>
+	        <c:choose>
+		        <c:when test="${not empty sessionScope.admin}">
+		            <!-- 관리자 로그인 상태 -->
+		            <div class="delete-button">
+		            	<a href="<%= request.getContextPath() %>/reply?inquireId=<%= inquery.getInqueryId() %>">삭제</a> <!-- 게시판 글 삭제 버튼 -->
+		        	</div>
+		        </c:when>
+	        </c:choose>
 	    </div>
         <div class="inquery-container">
 	        <div class="inquiry-detail">

@@ -149,10 +149,10 @@
 	            <form method="post">
 	            	<input type="hidden" id="role" name="role" value="user">
 	                <label for="id">아이디</label><br>
-	                <input type="text" id="id" name="id" class="loginPage-information-text" required ><br>
+	                <input type="text" id="id" name="id" class="loginPage-information-text" maxlength="11" pattern=".{1, 11}" value="<%= request.getAttribute("selectedId") != null ? request.getAttribute("selectedId") : "" %>" required ><br>
 	                
 	                <label for="password">비밀번호</label><br>
-	                <input type="password" id="password" name="password" class="loginPage-information-text" required ><br>
+	                <input type="password" id="password" name="password" class="loginPage-information-text" maxlength="20" pattern=".{1, 20}" required ><br>
 	                
 	                <button type="submit" class="loginPage-login-btn" name="action" value="login">로그인</button><br>
 	                <div class="loginPage-problem-div">

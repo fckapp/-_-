@@ -96,7 +96,7 @@
                 <img src="./images/icon_vertical_bar.svg" alt="vertical">
             </div>
             <div class="find_id_or_pw-iconbox">
-                <a href="<%= request.getContextPath() %>/Find_PW"><img src="./images/icon_password.svg" alt="password"></a>
+                <a href="<%= request.getContextPath() %>/find_pw"><img src="./images/icon_password.svg" alt="password"></a>
             </div>
         </div>
     </section>

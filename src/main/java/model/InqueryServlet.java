@@ -37,7 +37,7 @@ public class InqueryServlet extends HttpServlet {
 		int currentPage = request.getParameter("page") != null 
                 ? Integer.parseInt(request.getParameter("page")) 
                 : 1;
-		int itemsPerPage = 20; // 페이지당 보여줄 글 수
+		int itemsPerPage = 10; // 페이지당 보여줄 글 수
 		InqueryDao dao = new InqueryDao();
 		ArrayList<Inquery> inqueries = dao.getInqueries(currentPage, itemsPerPage);
 		int total_count = dao.countInqueries();

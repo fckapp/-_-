@@ -202,11 +202,11 @@
                         <tr>
                             <td>
                                 <label for="name">이름</label><br>
-                                <input type="text" id="name" name="name" class="accountPage-information-text" required >
+                                <input type="text" id="name" name="name" class="accountPage-information-text" maxlength="100" required >
                             </td>
                             <td>
                                 <label for="id">아이디</label><br>
-                                <input type="text" id="id" name="id" class="accountPage-information-text" required >
+                                <input type="text" id="id" name="id" class="accountPage-information-text" maxlength="11" pattern=".{1, 11}" required >
                                 <button type="button" class="accountPage-check-duplication" id="btnChkDup" onclick="checkIdDuplication()"><span>중복체크</span></button>
                             </td>
                         </tr>
@@ -214,7 +214,7 @@
                         <tr>
                             <td>
                                 <label for="tel">전화번호</label><br>
-                                <input type="text" id="tel" name="tel" class="accountPage-information-text" required >
+                                <input type="text" id="tel" name="tel" class="accountPage-information-text" maxlength="11" pattern="010\d{7,8}" placeholder="010부터 입력해주세요." required >
                             </td>
                             <td>
                                 <label for="password">비밀번호</label><br>
@@ -225,7 +225,7 @@
                         <tr>
                             <td class="accountPage-table-td-email">
                                 <label for="email">이메일</label><br>
-                                <input type="text" id="email" name="email" class="accountPage-information-text" required />
+                                <input type="email" id="email" name="email" class="accountPage-information-text" maxlength="100" required />
                                 <button type="button" class="accountPage-request-authentication-number" id="btnSend" onclick="sendVerificationEmail()"><span>인증번호전송</span></button>
                             </td>
                             <td>

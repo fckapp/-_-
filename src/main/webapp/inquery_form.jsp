@@ -14,7 +14,7 @@
 	}
 
 	Integer totalCount = (Integer) request.getAttribute("total_count");
-	int itemsPerPage = 20;   // 페이지당 보여줄 글 수
+	int itemsPerPage = 10;   // 페이지당 보여줄 글 수
 	int currentPage = request.getParameter("page") != null 
 	                  ? Integer.parseInt(request.getParameter("page")) 
 	                  : 1;  // 현재 페이지 (URL 파라미터로부터 가져오기)
@@ -275,7 +275,7 @@
     		if (inqueries != null && !inqueries.isEmpty()) {
     			for (Inquery inquery : inqueries) {
     				// admin_id_fk가 null이 아니면 "O", null이면 "X"를 표시
-                    String responseStatus = inquery.getAdminId() != null ? "O" : "X";
+                    String responseStatus = inquery.getAdminId() != null ? "답변완료" : "답변대기";
         %>
                 <div class="inquery-item" onclick="goToInquery(<%= inquery.getInqueryId() %>)">
                     <div class="num"><%= inquery.getInqueryId() %></div>
@@ -299,10 +299,6 @@
                 <% } %>
                 <a href="?page=<%= Math.min(totalPages, currentPage + 1) %>" style="<%= currentPage == totalPages ? "color: grey; pointer-events: none;" : "" %>" class="bt prev">&gt;</a>
                 <a href="?page=<%= totalPages %>" style="<%= currentPage == totalPages ? "color: grey; pointer-events: none;" : "" %>" class="bt last">&gt;&gt;</a>
-            </div>
-            <div class="bt_wrap">
-                <a href="#" class="on">목록</a>
-                <a href="#" class="edit">수정</a>
             </div>
         </div>
         <aside id="sidebar-btn">

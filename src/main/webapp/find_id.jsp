@@ -166,19 +166,19 @@
     <div class="find_id-container">
         <h2 class="find_id-maintext">아이디 찾기</h2>
         <div class="find_id-form">
-            <form method="post">
+            <form method="post" id="signupForm">
             	<input type="hidden" name=action_verification id="action_verification" value="findId">
                 <table class="find_id-table">
                     <tr>
                         <td>
                             <label for="name">이름</label><br>
-                            <input type="text" id="name" name="name" class="find_id-information-text" required >
+                            <input type="text" id="name" name="name" class="find_id-information-text" maxlength="100" required >
                         </td>
                     </tr>
                     <tr>
                         <td class="find_id-table-td-email">
                             <label for="email">이메일</label><br>
-                            <input type="text" id="email" name="email" class="find_id-information-text" required />
+                            <input type="email" id="email" name="email" class="find_id-information-text" maxlength="100" required />
                             <button type="button" class="find_id-request-authentication-number" id="btnSend" onclick="sendVerificationEmail()"><span>인증번호전송</span></button>
                         </td>
                     </tr>

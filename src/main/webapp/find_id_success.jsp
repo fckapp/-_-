@@ -19,15 +19,38 @@
     
     <script>
        	function moveToLoginServlet(){
-			var loginServletURL = "<%= request.getContextPath() %>/login"
-			window.location.href = loginServletURL;
+       		var selectedId = document.querySelector('input[name="selectedId"]:checked');
+       		
+       		if(selectedId){
+				var loginServletURL = "<%= request.getContextPath() %>/login";
+				loginServletURL += "?selectedId=" + encodeURIComponent(selectedId.value);
+				window.location.href = loginServletURL;
+       		}else{
+       			alert("아이디를 선택해 주세요.");
+       		}
        	}
        	
 		function moveToFindPWServlet(){
-			var findPWServletURL = "<%= request.getContextPath() %>/Find_PW"
-			window.location.href = findPWServletURL;
+			// 선택된 아이디 가져오기
+	        var selectedId = document.querySelector('input[name="selectedId"]:checked');
+			
+			if(selectedId){
+				var findPWServletURL = "<%= request.getContextPath() %>/find_pw";
+				findPWServletURL += "?selectedId=" + encodeURIComponent(selectedId.value);
+				window.location.href = findPWServletURL;
+			}else{
+				alert("아이디를 선택해 주세요.");
+			}
        	}
     </script>
+    <style>
+    	.find-ids{
+    		margin-bottom: 80px;
+    	}
+    	.btn-div{
+    		margin-bottom: 80px;
+    	}
+    </style>
 </head>
 <body class="home-page"; id="home-page">
     <!-- header 시작 -->
@@ -111,8 +134,9 @@
         <div class="find_id_success-maintext">아이디 찾기</div>
         <p class="content_summary">고객님의 정보와 일치하는 아이디 목록입니다.</p>
         <div class="box_ids">
-        	<form method="post">
+        	<form>
             	<input type="hidden" name="action" id="action" value="findId_success">
+            	<div class="find-ids">
              <%
             	// Find_ID 서블릿에서 전달된 userIds 리스트를 가져오기
             	Object object = request.getAttribute("matchingUserIDs");
@@ -122,8 +146,8 @@
             		if (matchingUserIDs != null && !matchingUserIDs.isEmpty()) {
                     	for (String userId : matchingUserIDs) {
              %>
-             		<div class="">
-             			<input type="radio" name="selectedId" value="<%= userId %>" required><%= userId %>
+             		<div>
+             			<input type="radio" id="<%= userId %>" name="selectedId" value="<%= userId %>" required><%= userId %>
              		</div>
 	         <%
                     	}
@@ -137,8 +161,11 @@
 					
             	}
              %>
-        		<button type="button" class="find_id_success-btnLogin" id="btnLogin" onclick="moveToLoginServlet()"><span>로그인하기</span></button>
-        		<button type="submit" class="find_id_success-btnFindPw" id="btnFindPw"><span>비밀번호 찾기</span></button>
+             	</div>
+             	<div class="btn-div">
+	        		<button type="button" class="find_id_success-btnLogin" id="btnLogin" onclick="moveToLoginServlet()"><span>로그인하기</span></button>
+	        		<button type="button" class="find_id_success-btnFindPw" id="btnFindPw" onclick="moveToFindPWServlet()"><span>비밀번호 찾기</span></button>
+        		</div>
         	</form>
         </div>
     </div>

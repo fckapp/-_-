@@ -140,6 +140,48 @@ public class EmailVerificationServlet extends HttpServlet {
 			    out.print(jsonResponse.toString());
 			    out.flush();
 			}
+		} else if("findPw".equals(action)) {
+			String id = request.getParameter("id");
+			User user = userDao.getUserById(id);
+			
+			if(user.getEmail().equals(getParam_email)) {
+				String verificationCode = generateVerificationCode();
+
+				// 세션에 인증번호 저장
+				HttpSession session = request.getSession();
+				session.setAttribute("verificationCode", verificationCode);
+
+				// 이메일로 인증번호 전송
+				emailSent = sendVerificationEmail(getParam_email, verificationCode);
+				
+				// JSON 응답 생성
+		        JSONObject jsonResponse = new JSONObject();
+		        if (emailSent) {
+		            jsonResponse.put("success", true);
+		        } else {
+		            jsonResponse.put("success", false);
+		            jsonResponse.put("error", "Failed to send email.");
+		        }
+
+		        // JSON 응답 전송
+		        response.setContentType("application/json");
+		        response.setCharacterEncoding("UTF-8");
+		        PrintWriter out = response.getWriter();
+		        out.print(jsonResponse.toString());
+		        out.flush();
+			}else {
+				JSONObject jsonResponse = new JSONObject();
+			    jsonResponse.put("success", false);
+			    jsonResponse.put("error", "No matching user found with the given email.");
+			    
+			    // JSON 응답 전송
+			    response.setContentType("application/json");
+			    response.setCharacterEncoding("UTF-8");
+			    PrintWriter out = response.getWriter();
+			    out.print(jsonResponse.toString());
+			    out.flush();
+			}
+			
 		}
 	}
 	

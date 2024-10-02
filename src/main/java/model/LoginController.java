@@ -33,6 +33,8 @@ public class LoginController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.sendRedirect(request.getContextPath() + "/login");
+		String selectedId = request.getParameter("selectedId");
+		request.setAttribute("selectedId", selectedId);
 		request.getRequestDispatcher("./login_form.jsp").forward(request, response);
 	}
 

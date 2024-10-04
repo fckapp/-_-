@@ -56,7 +56,7 @@
                 url:"<%= request.getContextPath() %>/verifyCode",             
                 type:"post",                                                  // HTTP 요청 방식(GET, POST)
                 dataType:"json",											  // 서버에서 보내줄 데이터의 타입
-                data:{"verificationCode" : $("#verificationCode").val()},     // HTTP 요청과 함께 서버로 보낼 데이터
+                data:{"verificationCode" : $("#certNum").val()},     // HTTP 요청과 함께 서버로 보낼 데이터
                 success: function(data){
                 	console.log("Received data:", data);
 	                if (data.success) {
@@ -89,14 +89,6 @@
             alert("회원님의 비밀번호는 " + password + "입니다.");
         }
      </script>
-     <style>
-     	form{
-     		display: flex;
-     		flex-direction: column;
-     		align-items: center;
-     		justify-content: center;
-     	}
-     </style>
 </head>
 <body class="home-page"; id="home-page">
     <!-- header 시작 -->
@@ -129,6 +121,22 @@
 	                    </c:when>
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
+	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
+	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
 	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>
@@ -167,14 +175,18 @@
                 <i class="fa-solid fa-bars"></i>
             </a>
         </nav>
-        
     </div>
     <jsp:include page="navbar.jsp"/>
     <div class="find_pw-container">
-        <div class="find_pw-maintext">비밀번호 찾기</div>
+        <div class="find_box_text">
+    		<h1 class="find_pw-maintext-id">
+    			<a href="<%= request.getContextPath() %>/find_id.jsp">아이디 찾기</a>
+    		</h1>
+    		<h1 class="find_pw-maintext-s"> / </h1>
+    		<h1 class="find_pw-maintext-pw">비밀번호 찾기</h1>
+    	</div>
         <div class="find_pw-form">
-        	<input type="hidden" name=action_verification id="action_verification" value="findPw">
-            <form action="find_pw" method="post" id="signupForm">
+            <form action="find_pw" method="post">
                 <table class="find_pw-table">
                     <tr>
                         <td>
@@ -185,22 +197,21 @@
                     <tr>
                         <td class="find_pw-table-td-email">
                             <label for="email">이메일</label><br>
-                            <input type="email" id="email" name="email" class="find_pw-information-text" maxlength="100" required />
+                            <input type="text" id="email" name="email" class="find_pw-information-text find-email-pw" maxlength="100" required />
                             <button type="button" class="find_pw-request-authentication-number" id="btnSend" onclick="sendVerificationEmail()"><span>인증번호전송</span></button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="verificationCode">인증번호</label><br>
-                            <input type="text" id="verificationCode" name="verificationCode" class="find_pw-information-text" required />
+                            <label for="certNum">인증번호</label><br>
+                            <input type="text" id="certNum" name="certNum" class="find_pw-information-text find-email-pw" required />
                             <button type="button" class="find_pw-request-authentication-number" id="btnCheck" onclick="checkAuthNumber()"><span>인증</span></button>
                         </td>
                     </tr>
                 </table>
-                <input type="text" id="Confirm" name="Confirm" style="display: none" value="">
-                <button type="submit" class="find_pw-commit-btn">완료</button><br>
             </form>
-            
+            <input type="text" id="Confirm" name="Confirm" style="display: none" value="">
+            <button type="submit" class="find_pw-commit-btn">완료</button><br>
         </div>
     </div>
     <footer class="sec-footer">
@@ -229,6 +240,4 @@
             </div>
         </div>
     </footer>
-</div>
-
 </body>

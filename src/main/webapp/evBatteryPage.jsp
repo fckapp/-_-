@@ -55,6 +55,14 @@
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
 	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
+	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>
 	                            		<img class="logout_icon" src='./images/logout4.svg' height="24px">
@@ -226,9 +234,6 @@
 								수월해 최적화 된 셀 구현이 가능합니다.
 							</div>
 						</div>
-						<div class="half_visualization">
-							<img src="./images/battery_2.jpg" alt="DB에서 불러와 띄울 것.">
-						</div>
 					</div>
 					<div class="__business-tab-content" id="productTab2" data-status="inactive">
 						<div class="half_desc">
@@ -238,9 +243,6 @@
 								최적화된 맞춤형 배터리 개발로 공간 활용도와 용량을 동시에 충족시킵니다. 또한
 								핵심 소재인 양극재, 분리막 기술역을 바탕으로 고용량, 고밀도, 초슬림의 차별화된 제품을 제공합니다. 
 							</div>
-						</div>
-						<div class="half_visualization">
-							<img src="./images/battery_2.jpg" alt="DB에서 불러와 띄울 것.">
 						</div>
 					</div>
 				</div>

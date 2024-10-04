@@ -8,8 +8,8 @@ import java.sql.SQLException;
 
 public class AdminDao {
 	final String driver = "org.mariadb.jdbc.Driver";
-	final String DB_IP = "192.168.32.14";
-	final String DB_PORT = "3306";
+	final String DB_IP = "192.168.32.14"; //192.168.32.14, localhost
+	final String DB_PORT = "3306"; //3307
 	final String DB_NAME = "bibliotdb";
 	final String DB_URL1 = "jdbc:mariadb://" + DB_IP + ":" + DB_PORT + "/" + DB_NAME;
 	private static final String DB_USER = "root";

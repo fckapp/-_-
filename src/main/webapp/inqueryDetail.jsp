@@ -76,6 +76,14 @@
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
 	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
+	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>
 	                            		<img class="logout_icon" src='./images/logout4.svg' height="24px">

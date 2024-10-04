@@ -408,41 +408,63 @@ footer .col:last-child{
 }
 /*---------------------------------------------------------id찾기 페이지-------------------------------------------------*/
 .find_id-container{
-    margin-bottom: 10%;
+    margin-bottom: 75px;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
 }
+.find_id-maintext-id{
+	margin-right: 20px;
+	margin-top: 40px;
+}
+.find_id-maintext-pw {
+	margin-left: 20px;
+	margin-top: 40px;
+}
+.find_id-maintext-pw a{
+	color: #E7E7E7;
+}
+.find_id-maintext-pw:hover a{
+	color: #000000;
+}
+.find_id-maintext-s{
+	margin-top: 40px;
+}
 .find_id-information-text {
-    width: 300px;
+    width: 320px;
     height: 40px;
     border-radius: 4px;
     font-size: 14px;
-    border-color: #fff;
-    background-color: #E6E6E6;
-    border: 0; /*input[type=text] border line 제거*/
+    border-color: #ffffff;
+    background-color: #f4f4f4;
+    border: 0;
+    margin-bottom: 24px;
 }
+
+.find_id-information-text:hover {
+    box-shadow: inset 0px 0px 0px 0.3px #666;
+}
+
 .find_id-request-authentication-number {
-    width: 60px; /* 50px 에서 60px로 바꿈*/
+    width: 320px;
     height: 40px;
-    background-color: #585858;
     border-radius: 4px;
-    color:white;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+    color:black;
     font-family: Pretendard;
     font-weight: 600;
-    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 30px;
 }
+
 .find_id-request-authentication-number:hover {
-    background-color: #2E2E2E;
+    background-color: black;
+    color: white;
 }
-.find_id-container .find_id-maintext{
-    text-align: center;
-    justify-content: center;
-    font-size: var(--font-size-lg);
-    font-weight: bold;
-    margin: 5%;
-}
+
 .find_id-form{
     display: flex;
     flex-direction: column;
@@ -450,11 +472,18 @@ footer .col:last-child{
     align-items: center;
 }
 .find_id-table{
-    border-spacing: 50px;
+   	max-width: 320px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    /* flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
     
 }
 .find_id-commit-btn{
-    width: 300px;
+    width: 320px;
     height: 40px;
     border-radius: 4px;
     border-style: none;
@@ -465,57 +494,74 @@ footer .col:last-child{
     text-align: center;
     margin-bottom: 60px;
     justify-content: center;
+    cursor: pointer;
 }
 .find_id-commit-btn:hover {
     background-color: #58ACFA;
 }
-.find_id-table-td-email input,
-.find_id-table-td-email button{
-    vertical-align: middle;
-}
-.find_id-container form{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-    justify-content: center;
+
+.find-email-id{
+	margin-bottom: 10px
 }
 /*---------------------------------------------------------pw찾기 페이지-------------------------------------------------*/
 .find_pw-container{
-    margin-bottom: 10%;
-    align-content: center;
+    margin-bottom: 56px;
+    align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
 }
+.find_box_text {
+	display: flex;
+}
+.find_pw-maintext-id{
+	margin-right: 20px;
+	margin-top: 40px;
+}
+.find_pw-maintext-pw {
+	margin-left: 20px;
+	margin-top: 40px;
+}
+.find_pw-maintext-id a{
+	color: #E7E7E7;
+}
+.find_pw-maintext-id:hover a{
+	color: #000000;
+}
+.find_pw-maintext-s{
+	margin-top: 40px;
+}
 .find_pw-information-text {
-    width: 300px;
+     width: 320px;
     height: 40px;
     border-radius: 4px;
     font-size: 14px;
-    border-color: #fff;
-    background-color: #E6E6E6;
-    border: 0; /*input[type=text] border line 제거*/
+    border-color: #ffffff;
+    background-color: #f4f4f4;
+    border: 0;
+    margin-bottom: 24px;
+}
+.find_pw-information-text:hover {
+    box-shadow: inset 0px 0px 0px 0.3px #666;
 }
 .find_pw-request-authentication-number {
-    width: 60px; /* 50px 에서 60px로 바꿈*/
+    width: 320px;
     height: 40px;
-    background-color: #585858;
     border-radius: 4px;
-    color:white;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+    color:black;
     font-family: Pretendard;
     font-weight: 600;
-    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 30px;
 }
 .find_pw-request-authentication-number:hover {
-    background-color: #2E2E2E;
+    background-color: black;
+    color: white;
 }
-.find_pw-container .find_pw-maintext{
-    text-align: center;
-    justify-content: center;
-    font-size: var(--font-size-lg);
-    font-weight: bold;
-    margin: 5%;
-}
+
 .find_pw-form{
     display: flex;
     flex-direction: column;
@@ -523,11 +569,17 @@ footer .col:last-child{
     align-items: center;
 }
 .find_pw-table{
-    border-spacing: 50px;
-    align-content: center;
+   max-width: 320px;
+   margin: auto;
+   background-color: #ffffff;
+   padding: 20px;
+   display: flex;
+   flex-direction: column; /* 세로 방향으로 정렬 */
+   align-items: center; /* 세로 가운데 정렬 */
+   justify-content: center; /* 가로 가운데 정렬 */
 }
 .find_pw-commit-btn{
-    width: 366px;
+    width: 320px;
     height: 40px;
     border-radius: 4px;
     border-style: none;
@@ -542,9 +594,8 @@ footer .col:last-child{
 .find_pw-commit-btn:hover {
     background-color: #58ACFA;
 }
-.find_pw-table-td-email input,
-.find_pw-table-td-email button{
-    vertical-align: middle;
+.find-email-pw{
+	margin-bottom: 10px
 }
 /*----------------------------------------------------------------------------아이디 목록 페이지----------------------------------------------*/
 .find_id_success-btnLogin{
@@ -575,9 +626,6 @@ footer .col:last-child{
 }
 .find_id_success-btnLogin:hover, .find_id_success-btnFindPw:hover {
     background-color: #58ACFA;
-}
-.box_ids form{
-	
 }
 .find_id_success-container{
 	display: flex;

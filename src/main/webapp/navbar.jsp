@@ -30,7 +30,7 @@
             <div class="menu-category">
                 <div class="category"><img class="main-product" src="./images/풍력발전기_모델4.svg" alt="모델4"></div>
                 <div class="main-product-text-box">
-                    <h4 class="main-product-text">wind power battery</h2>
+                    <h4 class="main-product-text main-1">wind power battery</h2>
                     <a href="<%=request.getContextPath()%>/WindPowerBattery" class="main-product-text-1">상세보기</a>
                     <a href="<%=request.getContextPath()%>/Inquery" class="main-product-text-2">문의하기</a>
                 </div>

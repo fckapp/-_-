@@ -122,6 +122,22 @@
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
 	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
+	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
+	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>
 	                            		<img class="logout_icon" src='./images/logout4.svg' height="24px">
@@ -162,38 +178,42 @@
         
     </div>
     <jsp:include page="navbar.jsp"/>
-    
-    <div class="find_id-container">
-        <h2 class="find_id-maintext">아이디 찾기</h2>
+   	<div class="find_id-container">
+    	<div class="find_box_text">
+    		<h1 class="find_id-maintext-id">아이디 찾기</h1>
+    		<h1 class="find_id-maintext-s"> / </h1>
+    		<h1 class="find_id-maintext-pw">
+    			<a href="<%= request.getContextPath() %>/find_pw">비밀번호 찾기</a>
+    		</h1>
+    	</div>
         <div class="find_id-form">
-            <form method="post" id="signupForm">
+            <form method="post">
             	<input type="hidden" name=action_verification id="action_verification" value="findId">
                 <table class="find_id-table">
                     <tr>
                         <td>
                             <label for="name">이름</label><br>
-                            <input type="text" id="name" name="name" class="find_id-information-text" maxlength="100" required >
+                            <input type="text" id="name" name="name" class="find_id-information-text" required >
                         </td>
                     </tr>
                     <tr>
                         <td class="find_id-table-td-email">
                             <label for="email">이메일</label><br>
-                            <input type="email" id="email" name="email" class="find_id-information-text" maxlength="100" required />
+                            <input type="text" id="email" name="email" class="find_id-information-text find-email-id" required />
                             <button type="button" class="find_id-request-authentication-number" id="btnSend" onclick="sendVerificationEmail()"><span>인증번호전송</span></button>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <label for="certNum">인증번호</label><br>
-                            <input type="text" id="certNum" name="certNum" class="find_id-information-text" required />
+                            <input type="text" id="certNum" name="certNum" class="find_id-information-text find-email-id" required />
                             <button type="button" class="find_id-request-authentication-number" id="btnCheck" onclick="checkAuthNumber()"><span>인증</span></button>
                         </td>
                     </tr>
                 </table>
                 <button type="submit" class="find_id-commit-btn">완료</button><br>
             </form>
-            
-        </div>
+        </div>    
     </div>
     <footer class="sec-footer">
         <div class="footer-primary">

@@ -211,6 +211,14 @@
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
 	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
+	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>
 	                            		<img class="logout_icon" src='./images/logout4.svg' height="24px">
@@ -254,8 +262,8 @@
     <jsp:include page="navbar.jsp"/>
     <div class="board_wrap">
         <div class="board_title">
-            <strong>문의 게시판</strong>
-            <p>자유롭게 문의 남겨주세요.</p>
+            <h1>문의 게시판</h1>
+            <span>자유롭게 문의 남겨주세요.</span>
         </div>
         <div class="'board_list_wrap">
             <div class="board_list">
@@ -299,24 +307,24 @@
                 <% } %>
                 <a href="?page=<%= Math.min(totalPages, currentPage + 1) %>" style="<%= currentPage == totalPages ? "color: grey; pointer-events: none;" : "" %>" class="bt prev">&gt;</a>
                 <a href="?page=<%= totalPages %>" style="<%= currentPage == totalPages ? "color: grey; pointer-events: none;" : "" %>" class="bt last">&gt;&gt;</a>
-            </div>
+            </div>          
         </div>
         <aside id="sidebar-btn">
             <ul>
-                <li>
+                <li class="btn-primary1">
                     <img src="./images/documents.png" class="widget">
                     <button type="button" class="btn btn-primary">모든문의</button>
                 </li>
-                <li>
-                    <img src="./images/talk.png" class="widget">
+                <li class="ask ask1">
+                    <img src="./images/문의하기.png" class="widget">
                     <button type="button" class="btn btn-primary" id="openInquiryModal" onclick="openInquiryModal()">문의하기</button>
                 </li>
-                <li>
+                <li class="btn-primary2">
                     <img src="./images/box.png" class="widget">
                     <button type="button" class="btn btn-primary" id="openMyqueryModal">나의문의</button>
                 </li>
-                <li>
-                    <img src="./images/ask.png" class="widget">
+                <li class="ask ask2">
+                    <img src="./images/고객센터.png" class="widget">
                     <button type="button" class="btn btn-primary" id="openHelpCenterModal">고객센터</button>
                 </li>
             </ul>
@@ -394,15 +402,17 @@
                     <i class="fas fa-times"></i>
                 </button>
                 <div class="modal-header">
-                    <h3>고객센터</h3>
+                    <h3 class="call_center">고객센터</h3>
                 </div>
                 <div class="modal-content">
-                    <form class="helpCenter">
-                        <img src="./images/phone.png" width="30px" height="30px" id="modal-photo">
-                        <div>070-1111-2222</div>
-                        <img src="./images/email.png" width="30px" height="30px" id="modal-photo">
-                        <div>bibliot@gmail.com</div>
-                    </form>
+                	<div class="tell">
+                		<i class="fa-solid fa-phone"></i>
+	                	<div>070-1111-2222</div>
+                	</div>
+                	<div class="email">
+                		<i class="fa-regular fa-envelope"></i>
+	                	<div>bibliot@gmail.com</div>
+                	</div>
                 </div>
             </div>
         </div>

@@ -71,11 +71,7 @@ public class SignupController extends HttpServlet {
 		
 		// 가입 결과에 따라 적절한 뷰로 이동
 		request.setAttribute("id", user.getId());
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/mainPage.jsp");
-		dispatcher.forward(request, response);
-//		HttpSession session = request.getSession();
-//		String redirectURL = (String) session.getAttribute("redirectURL");
-//        response.sendRedirect(redirectURL);
+		response.sendRedirect(request.getContextPath() + "/mainPage");  // 리다이렉트
 		
 	}
 

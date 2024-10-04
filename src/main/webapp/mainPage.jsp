@@ -55,7 +55,14 @@
 	                    </c:when>
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
-	                        
+	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
 	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>
@@ -123,7 +130,7 @@
                 </div>
                 <h2 class="img-text" style="font-size: 40px;">EV battery V2</h2>
                 <p class="img-text-sub" style="font-size: 16px;">지금 바로 문의하세요.</p>
-            </div>
+			</div>
             <div class="outter-box img">
                 <img class="main-img" src="./images/태양광.jpg" alt="태양광 사진">
                 <div class="inner-box">
@@ -145,8 +152,5 @@
         </div>
     </tbody>
     <jsp:include page="footer.jsp"/>
-    <script>
-    
-    </script>
 </body>
 </html>

@@ -26,12 +26,13 @@
     <style>
 		.toggle-container {
             display: flex;
-            background-color: #737373;
+            background-color: #000000;
             border-radius: 30px;
             padding: 5px;
-            width: 180px;
+            width: 150px;
             cursor: pointer;
             position: relative;
+            margin-bottom: 40px;
         }
 
         .toggle-option {
@@ -39,7 +40,7 @@
             text-align: center;
             padding: 8px 0;
             color: #fff;
-            transition: color 0.3s;
+            transition: color 1s;
             posistion: relative;
             z-index: 2;
             font-weight: 600;
@@ -50,6 +51,7 @@
             color: #000;
             background-color: #fff;
             border-radius: 25px;
+            transition: all 2s;
         }
 
         .toggle-indicator {
@@ -58,7 +60,7 @@
             width: 50%;
             height: 80%;
             border-radius: 25px;
-            transition: all 0.3s;
+            transition: all 1s;
             z-index: 1;
         }
 	</style>
@@ -97,6 +99,14 @@
 	                    </c:when>
 	                    <c:when test="${not empty sessionScope.admin}">
 	                        <!-- 관리자 로그인 상태 -->
+	                        <li>
+	                        	<a href="<%= request.getContextPath() %>/index.jsp">
+		                        	<div>
+		                        		<img class="account_icon" src="./images/데이터분석.png" height="24px">
+		                        		<span class="navbar-menu-text">Data Analysis</span>
+		                        	</div>
+	                        	</a>
+	                        </li>
 	                        <li>
 	                            <a href="<%= request.getContextPath() %>/logout">
 	                            	<div>
@@ -149,10 +159,10 @@
 	            <form method="post">
 	            	<input type="hidden" id="role" name="role" value="user">
 	                <label for="id">아이디</label><br>
-	                <input type="text" id="id" name="id" class="loginPage-information-text" maxlength="11" pattern=".{1, 11}" value="<%= request.getAttribute("selectedId") != null ? request.getAttribute("selectedId") : "" %>" required ><br>
+	                <input type="text" id="id" name="id" class="loginPage-information-text" required ><br>
 	                
 	                <label for="password">비밀번호</label><br>
-	                <input type="password" id="password" name="password" class="loginPage-information-text" maxlength="20" pattern=".{1, 20}" required ><br>
+	                <input type="password" id="password" name="password" class="loginPage-information-text" required ><br>
 	                
 	                <button type="submit" class="loginPage-login-btn" name="action" value="login">로그인</button><br>
 	                <div class="loginPage-problem-div">

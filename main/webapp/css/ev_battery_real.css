@@ -317,74 +317,14 @@ a {
     padding: 0;
     display: block;
 }
-/*-----------------------------------------------------------------------푸터-------------------------*/
-footer{
-    margin-top: 30px;
-}
-.footer-primary{
-    color: #fff;
-    letter-spacing: -0.05em;
-}
-footer .row:first-child{
-    background-color: black;
-    height: 63px;
-    width: 100%;
-    border-bottom: 1px solid #222;
-}
-footer .row:last-child{
-    background-color: black;
-    height: 85px;
-}
-.footer-links{
-    width: 100%;
-}
-footer ul{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0 0 0 3.75%;
-    list-style-type: none;
-}
-footer li::after{
-    content: "/";
-    margin: 0 10px;
-}
-footer li:last-child::after{
-    content: "";
-}
-footer li a:hover{
-    color: #fff;
-}
-footer .inner{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-footer li a{
-    color: #b4b4b4;
-}
-footer .col:last-child{
-    display: flex;
-    flex-direction: row;
-    height: 45px;
-    align-items: center;
-    padding-inline-start: 3.75%;
-}
-.footer-logo{
-    width: 115px;
-    height: auto;
-    margin-right: 20px;
-}
-.footer-logo img{
-    width: 100%;
-}
+
+
 /*----------------------------------EV-1------------------------------------------*/
 .evbattery-main {
     width: 100%;
     display: flex;
     position: relative; /* 부모 요소를 상대적 위치로 설정 */
+    border: none;
 }
 
 .background-blur {
@@ -398,15 +338,16 @@ footer .col:last-child{
     background-position: center; /* 중앙에 위치 */
     filter: blur(10px); /* 흐림 효과 */
     z-index: -1; /* 그래프 아래로 위치 */
+    border: none;
 }
 
 .left-main-wrapper {
-    width: 10%;
+    width: 50%;
     height: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 120px;
     border: 1px solid transparent; /* 전체 테두리를 투명하게 설정 */
-    border-right: 1px solid #1ABC9C; /* 오른쪽 테두리 색상과 두께 설정 */
+    flex-direction: column;
+    border: none;
 }
 
 .left-main-wrapper-box {
@@ -415,83 +356,11 @@ footer .col:last-child{
     align-items: center; /* 수평 중앙 정렬 */
 }
 
-.left-btn-1 {
-	display: inline-block; /* 버튼처럼 보이게 하기 위해 inline-block 설정 */
-    padding: 10px; /* 버튼 내부 여백 */
-    width: 150px; /* 버튼 너비를 고정 */
-    margin: 10px 0; /* 각 버튼 간격 */
-    background-color: #1ABC9C; /* 버튼 배경색 */
-    color: #FFFFFF; /* 글자색 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    border-radius: 5px; /* 둥근 테두리 */
-    text-decoration: none; /* 밑줄 제거 */
-    transition: background-color 0.3s; /* 배경색 변화에 부드러운 전환 추가 */
-}
-.left-btn-2 {
-	display: inline-block; /* 버튼처럼 보이게 하기 위해 inline-block 설정 */
-    padding: 10px; /* 버튼 내부 여백 */
-    width: 150px; /* 버튼 너비를 고정 */
-    margin: 10px 0; /* 각 버튼 간격 */
-    background-color: gray; /* 버튼 배경색 */
-    color: #FFFFFF; /* 글자색 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    border-radius: 5px; /* 둥근 테두리 */
-    text-decoration: none; /* 밑줄 제거 */
-    transition: background-color 0.3s; /* 배경색 변화에 부드러운 전환 추가 */
-}
-.left-btn-2:hover {
-	background-color:#1ABC9C;
-}
-.left-btn-3 {
-	display: inline-block; /* 버튼처럼 보이게 하기 위해 inline-block 설정 */
-    padding: 10px; /* 버튼 내부 여백 */
-    width: 150px; /* 버튼 너비를 고정 */
-    margin: 10px 0; /* 각 버튼 간격 */
-    background-color: gray; /* 버튼 배경색 */
-    color: #FFFFFF; /* 글자색 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    border-radius: 5px; /* 둥근 테두리 */
-    text-decoration: none; /* 밑줄 제거 */
-    transition: background-color 0.3s; /* 배경색 변화에 부드러운 전환 추가 */
-}
-.left-btn-3:hover {
-	background-color:#1ABC9C;
-}
-.left-btn-4 {
-	display: inline-block; /* 버튼처럼 보이게 하기 위해 inline-block 설정 */
-    padding: 10px; /* 버튼 내부 여백 */
-    width: 150px; /* 버튼 너비를 고정 */
-    margin: 10px 0; /* 각 버튼 간격 */
-    background-color: gray; /* 버튼 배경색 */
-    color: #FFFFFF; /* 글자색 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    border-radius: 5px; /* 둥근 테두리 */
-    text-decoration: none; /* 밑줄 제거 */
-    transition: background-color 0.3s; /* 배경색 변화에 부드러운 전환 추가 */
-}
-.left-btn-4:hover {
-	background-color:#1ABC9C;
-}
-.left-btn-5 {
-	display: inline-block; /* 버튼처럼 보이게 하기 위해 inline-block 설정 */
-    padding: 10px; /* 버튼 내부 여백 */
-    width: 150px; /* 버튼 너비를 고정 */
-    margin: 10px 0; /* 각 버튼 간격 */
-    background-color: gray; /* 버튼 배경색 */
-    color: #FFFFFF; /* 글자색 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    border-radius: 5px; /* 둥근 테두리 */
-    text-decoration: none; /* 밑줄 제거 */
-    transition: background-color 0.3s; /* 배경색 변화에 부드러운 전환 추가 */
-}
-.left-btn-5:hover {
-	background-color:#1ABC9C;
-}
-
 .right-main-wrapper {
-    width: 90%;
+    width: 70%;
     height: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
 }
 
 .right-main-wrapper-box {
@@ -507,35 +376,94 @@ footer .col:last-child{
 }
 
 .right-top-pip {
-	margin-top: 100px;
-	width: 50%; /* 폭을 100%로 설정 */
-    height: 600px; /* 원하는 높이 설정 */
+	width: 600px; /* 폭을 100%로 설정 */
+    height: 400px; /* 원하는 높이 설정 */
     position: relative; /* 자식 요소의 기준 */
     z-index: 1; /* 그래프 위로 위치 */
-    border-radius: 4px;
+    border: 1px solid white;
+    margin-top: 50px;
 }
 .right-top-right {
 	display: flex;
 	flex-direction: column;	
 }
 .right-top-bar {
-	margin-top: 100px;
-    width: 50%; /* 폭을 100%로 설정 */
-    height: 600px; /* 원하는 높이 설정 */
+    width: 600px; /* 폭을 100%로 설정 */
+    height: 400px; /* 원하는 높이 설정 */
     position: relative; /* 자식 요소의 기준 */
     z-index: 1; /* 그래프 위로 위치 */
-    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .right-under {
     display: flex;
     justify-content: center; /* 가운데 정렬 */
 }
-
-.right-under-line {
-    width: 100%; /* 폭을 100%로 설정 */
-    height: 600px; /* 원하는 높이 설정 */
+.right-under-hist {
+    width: 1200px; /* 폭을 100%로 설정 */
+    height: 400px; /* 원하는 높이 설정 */
     z-index: 1; /* 그래프 위로 위치 */
-    border-radius: 4px;
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+.right-under-line {
+    width: 1200px; /* 폭을 100%로 설정 */
+    height: 400px; /* 원하는 높이 설정 */
+    z-index: 1; /* 그래프 위로 위치 */
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+/* =================================================================상단 ============================== */
+.ev_BatteryPage-container {
+	width: 100%;
+	height: 100vh;
+}
+.ev-video {
+	width: 100%;
+	 object-fit: cover;
+}
+.business-ev{
+	align-content: center;
+	justify-content: center;
+	margin-top: 200px;
+	margin-bottom: 150px;
+}
+.business-title-area{
+    align-items: flex-end;
+    border-bottom: 1px solid #ddd;
+}
+.business-ev .__title{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.36;
+    margin-left: 30px;
+    
+}
+.business-ev .__well{
+    padding: 40px 30px;
+    border-radius: 3px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    justify-content: space-between;
     margin: 20px;
+    
+}
+.business-ev-tech{
+    display: flex;
+    justify-content: space-between;
+}
+.ev-color {
+	height: 300px;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(0.4, 57, 98, 0), #143962);
+}
+.ev_text {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 40px;
 }

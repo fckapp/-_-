@@ -55,8 +55,6 @@ function drawBarChart() {
             text: 'Full Charging Comparison', 
             font: { 
                 color: '#FFFFFF', // 제목 글자 색상 설정
-                size: 30,
-				family: 'Arial Black' // 굵은 글꼴 패밀리 사용
             }
         },
 		paper_bgcolor: 'rgba(0, 0, 0, 0)', // 전체 배경을 투명하게 설정
@@ -70,8 +68,6 @@ function drawBarChart() {
 		            y: -0.2, // y축 위치
 		            align: 'center'
 		        }],
-        width: 800,  // 원하는 너비 설정
-        height: 500  // 원하는 높이 설정
     };
 
     Plotly.newPlot('right-top-bar', barData, barLayout);

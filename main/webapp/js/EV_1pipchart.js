@@ -34,9 +34,7 @@ function drawPieChart1() {
 			title: {
 		        text: 'Defect Rate Comparison',
 		        font: {
-		            size: 30, // 제목 글자 크기
 		            color: '#FFFFFF',
-					family: 'Arial Black'// 제목 색상 흰색
 		            }
 			},
 		  annotations: [
@@ -67,8 +65,6 @@ function drawPieChart1() {
 	            align: 'center'
 	        },
 		  ],
-		  height: 500,
-		  width: 800,
 		  paper_bgcolor: 'rgba(0, 0, 0, 0)', // 전체 배경을 투명하게 설정
 		  showlegend: false,
 		  grid: {rows: 1, columns: 2},

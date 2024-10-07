@@ -290,69 +290,7 @@ a {
     padding: 0;
     display: block;
 }
-/*-----------------------------------------------------------------------푸터-------------------------*/
-footer{
-    margin-top: 30px;
-}
-.footer-primary{
-    color: #fff;
-    letter-spacing: -0.05em;
-}
-footer .row:first-child{
-    background-color: black;
-    height: 63px;
-    width: 100%;
-    border-bottom: 1px solid #222;
-}
-footer .row:last-child{
-    background-color: black;
-    height: 85px;
-}
-.footer-links{
-    width: 100%;
-}
-footer ul{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0 0 0 3.75%;
-    list-style-type: none;
-}
-footer li::after{
-    content: "/";
-    margin: 0 10px;
-}
-footer li:last-child::after{
-    content: "";
-}
-footer li a:hover{
-    color: #fff;
-}
-footer .inner{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-footer li a{
-    color: #b4b4b4;
-}
-footer .col:last-child{
-    display: flex;
-    flex-direction: row;
-    height: 45px;
-    align-items: center;
-    padding-inline-start: 3.75%;
-}
-.footer-logo{
-    width: 115px;
-    height: auto;
-    margin-right: 20px;
-}
-.footer-logo img{
-    width: 100%;
-}
+
 /*----------------------------------------------------------------------------*/
 :root{
     /* clamp(최소값, 화면 크기에 따라서 늘어나고 줄어들지, 최대값)*/
@@ -376,13 +314,8 @@ h3{
     padding-bottom: 1px;
 }
 .video-background{
-    width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-}
-.solar_BatteryPage-slider{
-    height: 580.5px; /*video 높이*/
-    position: relative;
+	width: 100%;
+	 object-fit: cover;
 }
 .video-overlay{
     position: absolute;
@@ -399,43 +332,27 @@ h3{
     font-weight: 800;
 }
 .video-overlay .__subtitle{
-    background-image: linear-gradient(to right, #f44336, #e91e63);
+    background-image: linear-gradient(to right, #0000FF, #e91e63);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .video-overlay .__sub{
     color: #fff;
 }
-.business-features > .container-boxed > .__txt {
-    padding-top: 140px;
-    text-align: left;
-    padding-bottom: 110px;
-    padding-left: 90px;
-}
-.business-features > .container-boxed > .__txt h3 {
-    font-size: 60px; 
-    font-weight: 700;
-    margin-bottom: 1em;
-    line-height: 1.75;
-    letter-spacing: 5px;
-    color: #fff;
-}
 .container-boxed{
     box-sizing: content-box;
-    padding-left: 100px;
-    padding-right: 100px;
     min-width: 1100px;
 }
 .business-ev{
-    padding-top: 50px;
+   align-content: center;
+	justify-content: center;
+	margin-top: 100px;
+	margin-bottom: 150px;
 }
 .business-ev .__well{
     padding: 40px 30px;
     border-radius: 3px;
     background-color: #fff;
-    margin-bottom: 60px;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 .business-ev-tech{
     display: flex;
@@ -450,6 +367,8 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 43px 70px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
 }
 
 .__item .__content{
@@ -457,10 +376,6 @@ h3{
     font-weight: 600;
     color: #666;
     margin-top: 15px;
-}
-.__item:hover{
-    box-shadow: 0 43px 70px rgba(0, 0, 0, 0.12);
-    border-radius: 10px;
 }
 .business-product{
     padding-top: 60px;
@@ -517,4 +432,65 @@ h3{
     max-width: 100%;
     height: auto;
     padding-top: 20px; /*위치 조정*/
+}
+.ev-color{
+	height: 300px;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(0.4, 57, 98, 0), #143962);
+}
+.ev_text {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 40px;
+}
+/* ==============================================그래프 ==================================================== */
+.evbattery-main {
+    width: 100%;
+    display: flex;
+    position: relative; /* 부모 요소를 상대적 위치로 설정 */
+    border: none;
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/태양광.jpg"); /* 배경 이미지 */
+    background-size: cover; /* 배경 이미지가 전체 영역을 덮도록 설정 */
+    background-position: center; /* 중앙에 위치 */
+    filter: blur(10px); /* 흐림 효과 */
+    z-index: -1; /* 그래프 아래로 위치 */
+    border: none;
+}
+
+.right-main-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+.right-main-wrapper-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 전체를 세로로 정렬 */
+    align-content: center;
+    justify-content: center;
+}
+
+.right-top-right {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.right-under-hist {
+    width: 1800px; /* 폭을 100%로 설정 */
+    height: 800px; /* 원하는 높이 설정 */
+    z-index: 1; /* 그래프 위로 위치 */
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-right: 20px;
 }

@@ -14,6 +14,10 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.js"
 		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	<script src="./js/menu.js" defer></script>
+	<script src='https://cdn.plot.ly/plotly-2.35.2.min.js'>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+	<script src="./js/solarChart.js"></script>
 	<title>태양광 배터리 : 비블리엇</title>
 </head>
 
@@ -111,21 +115,9 @@
 					<h3><span class="__subtitle">태양열 에너지</span><span class="__sub"> 혁신을</span><span class="__sub"> 선도하다.</span></h3>
 				  </div>
 			</article>
-		</div>
-		
-		<section class="business-features" style="background-image: url(./images/solar_edge.png); height: 610px;">
-			<div class="container-boxed">
-				<div class="__txt">
-					<h3>
-						고에너지,<br>
-						고출력,<br>
-						고성능
-					</h3>
-				</div>
-			</div>
-		</section>
-
-		<section class="business-ev">
+		</div>	
+	</div>
+	<section class="business-ev">
 			<div class="container-boxed">
 				<div class="__well">
 					<div class="business-ev-tech">
@@ -156,52 +148,20 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="business-product">
-			<div class="container-boxed">
-				<div class="business-title-area">
-					<h3 class="__title">Product</h3>
-				</div>
-				<div class="__business-tab-contents">
-					<div class="__business-tab-content active" id="productTab1" data-status="active">
-						<div class="half_desc">
-							<div class="__title">NMC 리튬 이온 배터리 셀</div>
-							<div class="__content">
-								높은 에너지 밀도, 높은 출력, 긴 수명으로 어떤 용도에도
-								신뢰하고 사용할 수 있습니다.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+	</section>
+	<div class="ev-color">
+		<h1 class="ev_text">Performance</h1>
 	</div>
-	<footer class="sec-footer">
-		<div class="footer-primary">
-			<div class="row">
-				<div class="inner">
-					<div class="footer-links">
-						<ul>
-							<li><a href="">Contact Us</a></li>
-							<li><a href="">법적고지</a></li>
-							<li><a href="">이용약관</a></li>
-							<li><a href=""><b>개인정보처리방침</b></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="inner">
-					<div class="col">
-						<div class="footer-logo"><img src="./images/logo_white.svg" alt=""></div>
-						<p class="footer-copyright">
-							ⓒ<span id="footerYear">2024</span> 비블리엇.
-						</p>
-					</div>
+    <div class="evbattery-main">
+    	<div class="background-blur"></div> <!-- 흐림 효과 배경 추가 -->
+		<div class="right-main-wrapper">
+			<div class="right-main-wrapper-box">
+				<div class="right-top-right">
+					<div class="right-under-hist" id="right-under-hist"></div>
 				</div>
 			</div>
 		</div>
-	</footer>
+	</div>
 </body>
 
 </html>

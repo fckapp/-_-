@@ -17,6 +17,7 @@
 	<script src="./js/EV_1pipchart.js"></script>
 	<script src="./js/EV_1barchart.js"></script>
 	<script src="./js/EV_1linechart.js"></script>
+	<script src="./js/EV_1SalesChart.js"></script>
 	<title>EV_1전지 : 비블리엇</title>
 </head>
 
@@ -106,37 +107,64 @@
         
     </div>
     <jsp:include page="navbar.jsp"/>
+    <div class="ev_BatteryPage-container">
+		<video class="ev-video" src="./images/main2.mp4" autoplay muted loop>
+	</div>
+	<section class="business-ev">
+		<div class="container-boxed">
+			<div class="business-title-area">
+				<h3 class="__title">EV Solution</h3>
+			</div>
+			<div class="__well">
+				<div class="business-ev-tech">
+					<div class="__item" style="padding: 0 20px;">
+						<p class="__subtitle">Extended Driving Distances</p>
+						<img src="./images/icon_EVsolution_01.png" alt="">
+						<p class="__content">
+							고 에너지 밀도 배터리로 장거리 운행<br>실현
+						</p>
+					</div>
+					<div class="__item" style="padding: 0 20px;">
+						<p class="__subtitle">Lighter Vehicle Weight</p>
+						<img src="./images/icon_EVsolution_02.png" alt="">
+						<p class="__content">
+							배터리 경량화를 통한 전비 향상
+						</p>
+					</div>
+					<div class="__item" style="padding: 0 20px;">
+						<p class="__subtitle">Quick Charging</p>
+						<img src="./images/icon_EVsolution_03.png" alt="">
+						<p class="__content">
+							급속충전을 통해 상용차 수익성<br>극대화
+						</p>
+					</div>
+					<div class="__item" style="padding: 0 20px;">
+						<p class="__subtitle">Space Efficiency</p>
+						<img src="./images/icon_EVsolution_04.png" alt="">
+						<p class="__content">
+							다양한 크기의 배터리를 통해<br>공간 활용도 최적화
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+	<div class="ev-color">
+		<h1 class="ev_text">Performance</h1>
+	</div>
     <div class="evbattery-main">
     	<div class="background-blur"></div> <!-- 흐림 효과 배경 추가 -->
 		<div class="left-main-wrapper">
 			<div class="left-main-wrapper-box">
-				<div class="left-btn-1">
-					<a href="<%= request.getContextPath() %>/evBatteryPage.jsp">EV_1 배터리</a>
-				</div>
-				<div class="left-btn-2">
-					<a href="">EV_2 배터리</a>
-				</div>
-				<div class="left-btn-3">
-					<a href="">태양열 배터리</a>
-				</div>
-				<div class="left-btn-4">
-					<a href="">풍력 배터리</a>
-				</div>
-				<div class="left-btn-5">
-					<a href="<%=request.getContextPath()%>/inquery">문의하기</a>
-				</div>
+				<div class="right-top-pip" id="right-top-pip"></div>
+				<div class="right-top-bar" id="right-top-bar"></div>
 			</div>
 		</div>
 		<div class="right-main-wrapper">
 			<div class="right-main-wrapper-box">
-				<div class="right-top">
-					<div class="right-top-pip" id="right-top-pip"></div>
 					<div class="right-top-right">
-						<div class="right-top-bar" id="right-top-bar"></div>
-					</div>
-				</div>
-				<div class="right-under">
-					<div class="right-under-line" id="right-under-line"></div>
+						<div class="right-under-hist" id="right-under-hist"></div>
+						<div class="right-under-line" id="right-under-line"></div>
 				</div>
 			</div>
 		</div>
@@ -144,7 +172,8 @@
 	<script>
 		drawPieChart1();
 		drawBarChart();
-		drawlineChart()
+		drawlineChart();
+		drawSalesChart();
 	</script>
 </body>
 </html>

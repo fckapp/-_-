@@ -4,6 +4,7 @@ function drawlineChart() {
 	  x: [0, 30, 60, 90, 120, 130, 160],
 	  y: [100, 80, 60, 40, 20, 10, 0 ],
 	  type: 'scatter',
+	  name: '비블리엇',
 	  mode: 'lines+markers',
 	  line: {
           color: '#1ABC9C', // 선 색상
@@ -15,6 +16,7 @@ function drawlineChart() {
 	  x: [0, 30, 60, 90, 100, 110, 130],
 	  y: [100, 80, 60, 40, 20, 10, 0 ],
 	  type: 'scatter',
+	  name: 'T사',
 	  mode: 'lines+markers',
 	  	  line: {
 	            color: '#808080', // 선 색상
@@ -28,9 +30,7 @@ function drawlineChart() {
 			title: { 
 				text: 'Driving Distance', 
 				font: {
-					family: 'Arial Black',
 					color: "#FFFFFF",
-					size: 30,
 					}
 					
 				},
@@ -53,6 +53,11 @@ function drawlineChart() {
 					tickfont: { color: '#FFFFFF', size:20}, // X축 눈금 글자 색상 흰색
 		        },
 				paper_bgcolor: 'rgba(0, 0, 0, 0)', // 전체 배경을 투명하게 설정
+				legend: {
+				           font: {
+				               color: '#FFFFFF' // 범례 텍스트 색상
+				           }
+				},
 		 
 		    };
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 120 90" style="enable-background:new 0 0 120 90;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF3333;}
+	
+		.st1{clip-path:url(#SVGID_00000124136207630279210560000000454125061588599983_);fill:none;stroke:#FF3333;stroke-width:0.903;stroke-linecap:round;stroke-linejoin:round;}
+	
+		.st2{clip-path:url(#SVGID_00000124136207630279210560000000454125061588599983_);fill:none;stroke:#001445;stroke-width:3.36;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<polygon class="st0" points="38.6,46 54.3,46 47.6,69.2 72.3,38 56.6,38 63.3,14.8 "/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="5.9" y="14.4" width="108.1" height="55.3"/>
+	</defs>
+	<clipPath id="SVGID_00000052819770966552466720000012533268100819318947_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<polygon style="clip-path:url(#SVGID_00000052819770966552466720000012533268100819318947_);fill:none;stroke:#FF3333;stroke-width:0.903;stroke-linecap:round;stroke-linejoin:round;" points="
+		63.3,14.8 38.6,46 54.3,46 47.6,69.2 72.3,38 56.6,38 	"/>
+	
+		<polyline style="clip-path:url(#SVGID_00000052819770966552466720000012533268100819318947_);fill:none;stroke:#001445;stroke-width:3.36;stroke-linecap:round;stroke-linejoin:round;" points="
+		46.1,30 7.6,30 7.6,63.2 44.6,63.2 	"/>
+	
+		<polyline style="clip-path:url(#SVGID_00000052819770966552466720000012533268100819318947_);fill:none;stroke:#001445;stroke-width:3.36;stroke-linecap:round;stroke-linejoin:round;" points="
+		63.4,30 102.9,30 102.9,63.2 57.4,63.2 	"/>
+	
+		<polyline style="clip-path:url(#SVGID_00000052819770966552466720000012533268100819318947_);fill:none;stroke:#001445;stroke-width:3.36;stroke-linecap:round;stroke-linejoin:round;" points="
+		105.3,39.5 112.4,39.5 112.4,51.5 105.3,51.5 	"/>
+</g>
+</svg>

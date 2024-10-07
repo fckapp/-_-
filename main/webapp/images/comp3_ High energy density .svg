@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 120 90" style="enable-background:new 0 0 120 90;" xml:space="preserve">
+<style type="text/css">
+	
+		.st0{clip-path:url(#SVGID_00000052806465024860533750000009332813921733155985_);fill:none;stroke:#001445;stroke-width:4.493;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{clip-path:url(#SVGID_00000052806465024860533750000009332813921733155985_);fill:#FFBF30;}
+	.st2{fill:none;stroke:#231F20;stroke-width:1.337;}
+	.st3{fill:none;stroke:#FF3333;stroke-width:4.493;stroke-linecap:round;stroke-linejoin:round;}
+	
+		.st4{clip-path:url(#SVGID_00000163032717050383617760000014994010615019885199_);fill:none;stroke:#FF3333;stroke-width:4.493;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="3.1" y="12.5" width="113.8" height="83.7"/>
+	</defs>
+	<clipPath id="SVGID_00000076566740624318267600000003325161700689419142_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<path style="clip-path:url(#SVGID_00000076566740624318267600000003325161700689419142_);fill:none;stroke:#001445;stroke-width:4.493;stroke-linecap:round;stroke-linejoin:round;" d="
+		M92.9,63.8c-5.8-14.8-18.1-25-32.4-25c-14.3,0-26.6,10.2-32.4,25L6.1,52.5c7-21.8,28.7-37.8,54.5-37.8c25.3,0,46.7,15.3,54.1,36.5
+		L92.9,63.8z"/>
+	<path style="clip-path:url(#SVGID_00000076566740624318267600000003325161700689419142_);fill:#FFBF30;" d="M32.5,40.6"/>
+</g>
+<path class="st2" d="M32.5,40.6"/>
+<line class="st3" x1="61" y1="63.6" x2="87.8" y2="31.5"/>
+<g>
+	<defs>
+		<rect id="SVGID_00000123422215269641604440000005501494962117597854_" x="3.1" y="12.5" width="113.8" height="83.7"/>
+	</defs>
+	<clipPath id="SVGID_00000137838545084549972160000011603956828944269203_">
+		<use xlink:href="#SVGID_00000123422215269641604440000005501494962117597854_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<path style="clip-path:url(#SVGID_00000137838545084549972160000011603956828944269203_);fill:none;stroke:#FF3333;stroke-width:4.493;stroke-linecap:round;stroke-linejoin:round;" d="
+		M57.9,74.7c3.3,0,6-2.7,6-6c0-3.3-2.7-6-6-6c-3.3,0-6,2.7-6,6C51.9,72,54.6,74.7,57.9,74.7z"/>
+</g>
+</svg>
